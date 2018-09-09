@@ -1,0 +1,23 @@
+// Instalare suita Libre Office
+1. descarci tar.gz de la: http://mirrors.serverhost.ro/libreoffice/tdf/libreoffice/stable/6.1.0/rpm/x86_64/
+2. dezarhivezi: "tar -xzf LibreOffice_6.1.0_Linux_x86-64_rpm.tar.gz"
+3. "cd LibreOffice_6.1.0.3_Linux_x86-64_rpm/RPMS/"
+4. "yum localinstall *.rpm"
+5. "yum install cairo cups-libs libSM"
+
+// Instalare imprimanta (in cazul meu, Samsung SCX-3400)
+0. https://negativo17.org/samsung-unified-linux-driver-printers-scanners/
+1. "yum-config-manager --add-repo=https://negativo17.org/repos/epel-uld.repo"
+2. "yum -y install uld"
+3. "firewall-cmd --zone=public --add-service=uld --permanent"
+4. "firewall-cmd --zone=public --add-service=uld"
+5. cautare Devices, selectezi dupa Printers, Unlock, introduci parola
+6. selectezi imprimanta dorita, cauti driver pentru ea
+7. in cazul acestei multifunctionale, scaner-ul a fost detectat automat, se poate verifica cu: "scanimage -nL"
+
+
+// Scanare imagine folosind terminalul
+1. instalezi ImageMagick: "yum install ImageMagick"
+2. "scanimage --format=tiff | convert tiff:- /home/groapamihai/Pictures/index_apa.jpg"
+
+
