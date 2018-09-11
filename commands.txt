@@ -21,3 +21,6 @@
 2. "scanimage --format=tiff | convert tiff:- /home/groapamihai/Pictures/index_apa.jpg"
 
 
+// Printare folosind terminalul
+1. listare imprimante: "lpstat -p -d"
+2. lp -d SCX-3400 /home/groapamihai/Pictures/index_apa.jpg
